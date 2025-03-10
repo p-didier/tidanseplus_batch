@@ -1,58 +1,64 @@
-# EUSIPCO 2025 TI-DANSE+
+# Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks
 
-This repository contains the code for the experiments presented in the EUSIPCO 2025 submission ``Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks'' by Paul Didier, Toon van Waterschoot, Simon Doclo, Jörg Bitzer, and Marc Moonen.
+This repository contains the code files that were used to generate the results reported in the paper ``Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks'' by Paul Didier, Toon van Waterschoot, Simon Doclo, Jörg Bitzer, and Marc Moonen, submitted to the 33rd European Signal Processing Conference (EUSIPCO 2025) held in Isola delle Femmine – Palermo – Italy, on September 8-12, 2025.
 
-## Getting Started
+## Abstract
 
-### Prerequisites
+This paper addresses the challenge of distributed adaptive node-specific signal estimation (DANSE) in topology-unconstrained wireless acoustic sensor networks (WASNs) where sensor nodes exchange only fused versions of their local signals. The topology-independent DANSE (TI-DANSE) algorithm has previously been presented to handle non-fully connected and time-varying WASNs, however, its slow convergence limits its applicability. To address this limitation, the TI-DANSE<sup>+</sup> to algorithm is proposed, which allows updating nodes to separately use partial in-network sums from neighbors in their local estimation problem, thus increasing the available degrees of freedom and accelerating convergence with respect to TI-DANSE. Additionally, a tree-pruning strategy is proposed to further increase convergence speed. TI-DANSE<sup>+</sup> converges as fast as the DANSE algorithm in fully connected WASNs while reducing transmit power usage. The advantageous convergence properties of TI-DANSE<sup>+</sup> are demonstrated in numerical simulations.
 
-- Python 3.12
-- Required Python packages (listed in `requirements.txt`)
+### Requirements
 
-### Installation
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/tidanseplus_batch.git
-    ```
-2. Navigate to the project directory:
-    ```sh
-    cd tidanseplus_batch
-    ```
-3. Install the required packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
+Required Python packages are listed in `requirements.txt`.
 
 ## Running the Experiment
 
 To run the main experiment, execute `main.py` with the configuration specified in `main_cfg.yaml`:
 
-```sh
+```
 python main.py --config main_cfg.yaml
 ```
 
-## Post-Processing
-
 After running the experiment, you can post-process the output using `pp.py` with the path to the simulated results specified:
 
-```sh
+```
 python pp.py --path "path/to/your/data.pkl"
 ```
 
-## Repository Structure
+## Cite us
 
-- `main.py`: Script to run the main experiment.
-- `main_cfg.yaml`: Configuration file for the main experiment.
-- `pp.py`: Script for post-processing the experiment output.
-- `requirements.txt`: List of required Python packages.
+If you find this code helpful and want to use it in your own research, please cite the following paper:
+* Plain text:
+```
+P. Didier, T. van Waterschoot, S. Doclo, J. Bitzer, and M. Moonen, "Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks", submitted to the 33rd European Signal Processing Conference (EUSIPCO 2025), 2025, pp. 1--5.
+```
+* Bibtex
+```
+@INPROCEEDINGS{didierImproved2025,
+  author={Didier, Paul and van Waterschoot, Toon, and Doclo, Simon and Bitzer, Joerg and Moonen, Marc},
+  booktitle={2025 European Signal Processing Conference (EUSIPCO)},
+  title={Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks},
+  year={2025},
+  volume={},
+  number={},
+  pages={1-5},
+}
+```
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+Copyright (C) 2025 Paul Didier
 
-## Acknowledgments
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-- Special thanks to the contributors and the research community.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-For any questions or issues, please open an issue on the repository.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+```
