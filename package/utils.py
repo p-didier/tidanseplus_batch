@@ -42,6 +42,7 @@ class Signal:
             out.wd[key] = val[:, idx1:idx2, :]
         return out
 
+
 @dataclass
 class SignalsCollection:
     sigs: list[Signal] = field(default_factory=list)
@@ -162,7 +163,7 @@ class SignalsCollection:
                 wd={key: s.wd[key][..., [l]] for key in s.wd.keys()}
             ) for s in self.sigs]
         )
-    
+
 
 @dataclass
 class Parameters:
@@ -1258,7 +1259,6 @@ class LatentSignals:
             self.globalNoise.append(
                 self.get_latent_sig(n, rng=rng)
             )
-
 
     def get_latent_sig(self, n, rng=np.random.RandomState()):
         """

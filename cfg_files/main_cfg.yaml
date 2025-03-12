@@ -6,18 +6,13 @@ algNames:
 
 c: 343  # speed of sound [m/s]
 fs: 16000  # sampling frequency [Hz]
-# fs: 8000  # sampling frequency [Hz]
 rd: 5  # room dimension [m]
 dim: 2  # room dimensionality (2D or 3D)
 t60: 0.  # reverberation time [s]
-# t60: .2  # reverberation time [s]
 mindWalls: 0.25  # minimum distance to walls [m]
 mindSourceSensor: 0.5  # minimum distance between sources and sensors [m]
 d: 0.2  # array element separation [m]
 commDist: 1.5  # communication distance [m] (used at ad-hoc topology initialization, but `connectivity` plays a role)
-# connectivity: '[1]'  # amount of ad-hoc topology connectivity
-# connectivity: '[0.8]'  # amount of ad-hoc topology connectivity
-# connectivity: '[0.6]'  # amount of ad-hoc topology connectivity
 connectivity: '[0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1]'  # amount of ad-hoc topology connectivity
 
 TmaxOnlineMode: 10  # [s] max. signal duration, only for online-mode processing
@@ -36,24 +31,11 @@ win: hann  # window type
 # pruningType: minst  # minimum spanning tree
 pruningType: mmut  # multiple "max-branch" pruning, maximizing the # of branches at root node (different at every iteration)
 
-onOffTargetProbability: null  # Probability of target signal activity (None for no on-off)
-# onOffTargetProbability: 0.4
-
-changeAscEvery: null  # Change acoustic scenario (steering matrices) every [frames] (None for no change)
-# changeAscEvery: 100
-randomizeTopologyEvery: null  # Change connections between nodes every [iterations] (None for no change)
-# randomizeTopologyEvery: 1
-
 useRss: true  # if True, use Rss instead of Ryy-Rnn
-# useRss: false  # if True, use Rss instead of Ryy-Rnn
 
 nMCbatch: 10  # number of Monte Carlo runs for batch processing
-# nMCbatch: 1  # number of Monte Carlo runs for batch processing
-# nMCbatch: 50  # number of Monte Carlo runs for batch processing
-
-########## singleBin: null  # [only if `useISM` is true] if not None (`null` in YAML), use only a single frequency bin (index `singleBin`) in WOLA.
 singleBin: 20  # [only if `useISM` is true] if not None (`null` in YAML), use only a single frequency bin (index `singleBin`) in WOLA.
 
 ########
 seed: 42
-exportFolderSuffix: '_reproduction_mmut'
+exportFolderSuffix: '_mmut_test'

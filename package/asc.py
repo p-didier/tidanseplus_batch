@@ -107,35 +107,6 @@ class AcousticScenario:
             'gn': sources[c.nGlobDes:c.nGlobDes + c.nGlobNoi, :]
         }
         return pos
-
-    def gen_steering_mats(self, sensorPositions, sourcesPositions: dict[str, np.ndarray]):
-        """
-        Generate steering matrices based on sensor and source positions.
-
-        Parameters:
-        - sensorPositions: sensor positions
-        - sourcesPositions: source positions, a dictionary with keys 'gd', 'gn'
-        """
-        nSources = {
-            'gd': self.cfg.nGlobDes,
-            'gn': self.cfg.nGlobNoi,
-        }
-        sm = dict([
-            (key, [
-                np.zeros((self.cfg.Mk, nSources[key]))
-                for _ in range(self.cfg.K)
-            ])
-            for key in sourcesPositions.keys()
-        ])
-        for k in range(self.cfg.K):
-            for m in range(self.cfg.Mk):
-                for s in range(self.cfg.nGlobDes):
-                    d = np.linalg.norm(sensorPositions[k, m, :] - sourcesPositions['gd'][s, :])
-                    sm['gd'][k][m, s] = 1 / d
-                for s in range(self.cfg.nGlobNoi):
-                    d = np.linalg.norm(sensorPositions[k, m, :] - sourcesPositions['gn'][s, :])
-                    sm['gn'][k][m, s] = 1 / d
-        return sm
     
     def generate_wasn(
             self,
@@ -187,7 +158,6 @@ class AcousticScenario:
 
         # Generate sensor positions
         sensorsPos = self.generate_sensors(nodesPos, rng)
-        
         # Generate source positions
         sourcesPos = self.generate_sources(sensorsPos, rng)
 

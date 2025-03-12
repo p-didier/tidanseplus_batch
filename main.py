@@ -23,7 +23,7 @@ def main():
 
     # Parse arguments
     parser = argparse.ArgumentParser(description="Run the script with a specific configuration file.")
-    parser.add_argument('--config', type=str, required=True, help="Path to the configuration YAML file")
+    parser.add_argument('--config', type=str, required=False, help="Path to the configuration YAML file", default=f'{Path(__file__).parent}/cfg_files/main_cfg.yaml')
     args = parser.parse_args()
 
     # Load the configuration
