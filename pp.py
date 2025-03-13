@@ -1,7 +1,7 @@
 # Purpose of script:
 # This script post-processes data and plots the results for the EUSIPCO 2025
-# submission: "Improved Distributed Adaptive Node-Specific Signal Estimation for
-# Topology-Unconstrained Wireless Acoustic Sensor Networks" by Paul Didier,
+# submission: "Improved Topology-Independent Distributed Adaptive Node-Specific
+# Signal Estimation for Wireless Acoustic Sensor Networks" by Paul Didier,
 # Toon van Waterschoot, Simon Doclo, Jörg Bitzer, and Marc Moonen.
 #
 # (c) Paul Didier, SOUNDS ETN, KU Leuven ESAT STADIUS

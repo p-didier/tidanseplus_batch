@@ -1,10 +1,10 @@
-# Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks
+# Improved Topology-Independent Distributed Adaptive Node-Specific Signal Estimation for Wireless Acoustic Sensor Networks
 
-This repository contains the code files that were used to generate the results reported in the paper ``Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks'' by Paul Didier, Toon van Waterschoot, Simon Doclo, Jörg Bitzer, and Marc Moonen, submitted to the 33rd European Signal Processing Conference (EUSIPCO 2025) held in Isola delle Femmine – Palermo – Italy, on September 8-12, 2025.
+This repository contains the code files that were used to generate the results reported in the paper ``Improved Topology-Independent Distributed Adaptive Node-Specific Signal Estimation for Wireless Acoustic Sensor Networks'' by Paul Didier, Toon van Waterschoot, Simon Doclo, Jörg Bitzer, and Marc Moonen, submitted to the 33rd European Signal Processing Conference (EUSIPCO 2025) held in Isola delle Femmine – Palermo – Italy, on September 8-12, 2025.
 
 ## Abstract
 
-This paper addresses the challenge of distributed adaptive node-specific signal estimation (DANSE) in topology-unconstrained wireless acoustic sensor networks (WASNs) where sensor nodes exchange only fused versions of their local signals. The topology-independent DANSE (TI-DANSE) algorithm has previously been presented to handle non-fully connected and time-varying WASNs, however, its slow convergence limits its applicability. To address this limitation, the TI-DANSE<sup>+</sup> to algorithm is proposed, which allows updating nodes to separately use partial in-network sums from neighbors in their local estimation problem, thus increasing the available degrees of freedom and accelerating convergence with respect to TI-DANSE. Additionally, a tree-pruning strategy is proposed to further increase convergence speed. TI-DANSE<sup>+</sup> converges as fast as the DANSE algorithm in fully connected WASNs while reducing transmit power usage. The advantageous convergence properties of TI-DANSE<sup>+</sup> are demonstrated in numerical simulations.
+This paper addresses the challenge of topology-independent (TI) distributed adaptive node-specific signal estimation (DANSE) in wireless acoustic sensor networks (WASNs) where sensor nodes exchange only fused versions of their local signals. An algorithm named TI-DANSE has previously been presented to handle non-fully connected WASNs. However, its slow iterative convergence towards the optimal solution limits its applicability. To address this, we propose in this paper the TI-DANSE<\sup>+<\sup> algorithm. At each iteration in TI-DANSE<\sup>+<\sup>, the node set to update its local parameters is allowed to exploit each individual partial in-network sums transmitted by its neighbors in its local estimation problem, increasing the available degrees of freedom and accelerating convergence with respect to TI-DANSE. Additionally, a tree-pruning strategy is proposed to further increase convergence speed. TI-DANSE<\sup>+<\sup> converges as fast as the DANSE algorithm in fully connected WASNs while reducing transmit power usage. The convergence properties of TI-DANSE<\sup>+<\sup> are demonstrated in numerical simulations.
 
 ### Requirements
 
@@ -29,14 +29,14 @@ python pp.py --path "path/to/your/data.pkl"
 If you find this code helpful and want to use it in your own research, please cite the following paper:
 * Plain text:
 ```
-P. Didier, T. van Waterschoot, S. Doclo, J. Bitzer, and M. Moonen, "Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks", submitted to the 33rd European Signal Processing Conference (EUSIPCO 2025), 2025, pp. 1--5.
+P. Didier, T. van Waterschoot, S. Doclo, J. Bitzer, and M. Moonen, "Improved Topology-Independent Distributed Adaptive Node-Specific Signal Estimation for Wireless Acoustic Sensor Networks", submitted to the 33rd European Signal Processing Conference (EUSIPCO 2025), 2025, pp. 1--5.
 ```
 * Bibtex
 ```
 @INPROCEEDINGS{didierImproved2025,
   author={Didier, Paul and van Waterschoot, Toon, and Doclo, Simon and Bitzer, Joerg and Moonen, Marc},
   booktitle={2025 European Signal Processing Conference (EUSIPCO)},
-  title={Improved Distributed Adaptive Node-Specific Signal Estimation for Topology-Unconstrained Wireless Acoustic Sensor Networks},
+  title={Improved Topology-Independent Distributed Adaptive Node-Specific Signal Estimation for Wireless Acoustic Sensor Networks},
   year={2025},
   volume={},
   number={},

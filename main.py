@@ -4,8 +4,8 @@
 #
 # References:
 # [1] Didier, P., van Waterschoot, T., Doclo, S., Bitzer, J., and Moonen, M.,
-# Improved Distributed Adaptive Node-Specific Signal Estimation for
-# Topology-Unconstrained Wireless Acoustic Sensor Networks. Submitted to
+# Improved Topology-Independent Distributed Adaptive Node-Specific Signal
+# Estimation for Wireless Acoustic Sensor Networks. Submitted to
 # EUSIPCO 2025.
 
 import sys
